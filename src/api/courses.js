@@ -5,7 +5,7 @@ export const createCourse = (user, course) => {
   console.log(user, course)
   return axios({
     method: 'POST',
-    url: apiUrl + '/admin/api/course/add/',
+    url: apiUrl + '/courses/',
     headers: {
       'Authorization': `Token ${user.token}`
     },
