@@ -1,15 +1,19 @@
 import apiUrl from '../apiConfig'
 import axios from 'axios'
 
-export const signUp = credentials => {
+export const create = (courses, user) => {
+  console.log(user)
   return axios({
     method: 'POST',
-    url: apiUrl + '/sign-up/',
+    url: apiUrl + '/admin/api/course/',
+    headers: {
+      'Authorization': `Token ${user.token}`
+    },
     data: {
-      credentials: {
-        email: credentials.email,
-        password: credentials.password,
-        password_confirmation: credentials.passwordConfirmation
+      course: {
+        name: courses.name,
+        subject: courses.subject,
+        course_description: courses.course_description
       }
     }
   })
