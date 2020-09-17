@@ -1,7 +1,7 @@
 // Code for creating a course and displaying the Form on React.js client
 
 import React, { useState } from 'react'
-import { Redirect, Link } from 'react-router-dom'
+import { Redirect } from 'react-router-dom'
 import Form from 'react-bootstrap/Form'
 import InputGroup from 'react-bootstrap/InputGroup'
 import Button from 'react-bootstrap/Button'
@@ -83,9 +83,9 @@ const CourseCreate = ({ msgAlert, user }) => {
               />
             </InputGroup>
           </Form.Group>
-            <Button type="submit">
+          <Button type="submit">
               Submit
-            </Button>
+          </Button>
         </Form>
       </div>
     </div>

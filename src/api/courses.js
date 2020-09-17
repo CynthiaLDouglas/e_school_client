@@ -19,15 +19,12 @@ export const createCourse = (user, course) => {
   })
 }
 
-export const signIn = credentials => {
+export const allCourses = (user, course) => {
   return axios({
-    url: apiUrl + '/sign-in/',
-    method: 'POST',
-    data: {
-      credentials: {
-        email: credentials.email,
-        password: credentials.password
-      }
+    url: apiUrl + '/courses/',
+    method: 'GET',
+    headers: {
+      'Authorization': `Token ${user.token}`
     }
   })
 }

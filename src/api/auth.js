@@ -8,6 +8,9 @@ export const signUp = credentials => {
     data: {
       credentials: {
         email: credentials.email,
+        first_name: credentials.firstName,
+        last_name: credentials.lastName,
+        role_in_school: credentials.roleInSchool,
         password: credentials.password,
         password_confirmation: credentials.passwordConfirmation
       }

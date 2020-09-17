@@ -13,6 +13,9 @@ class SignUp extends Component {
 
     this.state = {
       email: '',
+      firstName: '',
+      lastName: '',
+      roleInSchool: '',
       password: '',
       passwordConfirmation: ''
     }
@@ -37,7 +40,13 @@ class SignUp extends Component {
       }))
       .then(() => history.push('/'))
       .catch(error => {
-        this.setState({ email: '', password: '', passwordConfirmation: '' })
+        this.setState({
+          email: '',
+          firstName: '',
+          lastName: '',
+          roleInSchool: '',
+          password: '',
+          passwordConfirmation: '' })
         msgAlert({
           heading: 'Sign Up Failed with error: ' + error.message,
           message: messages.signUpFailure,
@@ -47,7 +56,7 @@ class SignUp extends Component {
   }
 
   render () {
-    const { email, password, passwordConfirmation } = this.state
+    const { email, firstName, lastName, roleInSchool, password, passwordConfirmation } = this.state
 
     return (
       <div className="row">
@@ -62,6 +71,39 @@ class SignUp extends Component {
                 name="email"
                 value={email}
                 placeholder="Enter email"
+                onChange={this.handleChange}
+              />
+            </Form.Group>
+            <Form.Group controlid="firstName">
+              <Form.Label>First Name</Form.Label>
+              <Form.Control
+                required
+                type="text"
+                name="firstName"
+                value={firstName}
+                placeholder="Enter your First Name"
+                onChange={this.handleChange}
+              />
+            </Form.Group>
+            <Form.Group controlid="lastName">
+              <Form.Label>Last Name</Form.Label>
+              <Form.Control
+                required
+                type="text"
+                name="lastName"
+                value={lastName}
+                placeholder="Enter your last_name"
+                onChange={this.handleChange}
+              />
+            </Form.Group>
+            <Form.Group controlid="roleInSchool">
+              <Form.Label>Role</Form.Label>
+              <Form.Control
+                required
+                type="text"
+                name="roleInSchool"
+                value={roleInSchool}
+                placeholder="Enter your role"
                 onChange={this.handleChange}
               />
             </Form.Group>

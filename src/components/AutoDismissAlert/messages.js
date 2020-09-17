@@ -7,5 +7,7 @@ export default {
   changePasswordSuccess: 'Password changed successfully!',
   changePasswordFailure: 'Failed to change passwords. Check your old password and try again.',
   createCourseSuccess: 'Course created',
-  createCourseFailure: 'Course creation Failed'
+  createCourseFailure: 'Course creation Failed',
+  deleteCourseSuccess: 'Course was deleted',
+  deleteCourseFailure: 'Course failed to delete'
 }

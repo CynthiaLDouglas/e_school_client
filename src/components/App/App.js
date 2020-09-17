@@ -9,6 +9,7 @@ import SignIn from '../SignIn/SignIn'
 import SignOut from '../SignOut/SignOut'
 import ChangePassword from '../ChangePassword/ChangePassword'
 import CourseCreate from '../Routes/CourseCreate'
+import Courses from '../Routes/Courses'
 
 class App extends Component {
   constructor () {
@@ -57,6 +58,9 @@ class App extends Component {
           )} />
           <AuthenticatedRoute user={user} path='/new-course' render={() => (
             <CourseCreate msgAlert={this.msgAlert} user={user} />
+          )} />
+          <AuthenticatedRoute user={user} path='/all-courses' render={() => (
+            <Courses msgAlert={this.msgAlert} user={user} />
           )} />
         </main>
       </Fragment>
