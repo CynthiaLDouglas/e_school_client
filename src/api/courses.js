@@ -1,19 +1,19 @@
 import apiUrl from '../apiConfig'
 import axios from 'axios'
 
-export const create = (courses, user) => {
-  console.log(user)
+export const createCourse = (user, course) => {
+  console.log(user, course)
   return axios({
     method: 'POST',
-    url: apiUrl + '/admin/api/course/',
+    url: apiUrl + '/admin/api/course/add/',
     headers: {
       'Authorization': `Token ${user.token}`
     },
     data: {
       course: {
-        name: courses.name,
-        subject: courses.subject,
-        course_description: courses.course_description
+        name: course.name,
+        subject: course.subject,
+        course_description: course.course_description
       }
     }
   })

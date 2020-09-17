@@ -51,7 +51,7 @@ class ChangePassword extends Component {
         <div className="col-sm-10 col-md-8 mx-auto mt-5">
           <h3>Change Password</h3>
           <Form onSubmit={this.onChangePassword}>
-            <Form.Group controlId="oldPassword">
+            <Form.Group controlid="oldPassword">
               <Form.Label>Old password</Form.Label>
               <Form.Control
                 required
@@ -62,7 +62,7 @@ class ChangePassword extends Component {
                 onChange={this.handleChange}
               />
             </Form.Group>
-            <Form.Group controlId="newPassword">
+            <Form.Group controlid="newPassword">
               <Form.Label>New Password</Form.Label>
               <Form.Control
                 required
