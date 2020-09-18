@@ -54,7 +54,7 @@ const Courses = ({ msgAlert, user, match }) => {
                 <Card style={{ width: '35rem', margin: '10px', opacity: '100%' }}>
                   <Card.Header as="h5">Course: {course.name}</Card.Header>
                   <Card.Body>
-                    <Card.Title>Written By:{course.owner.last_name}</Card.Title>
+                    <Card.Title>Written By:{course.last_name}</Card.Title>
                     <Card.Subtitle>Subject: {course.subject}</Card.Subtitle>
                     <Card.Text>
                       Course Description: <br />{course.course_description}
