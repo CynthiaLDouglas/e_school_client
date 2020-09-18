@@ -58,11 +58,12 @@ const Courses = ({ msgAlert, user, match }) => {
                     <Card.Subtitle>Subject: {course.subject}</Card.Subtitle>
                     <Card.Text>
                       Course Description: <br />{course.course_description}
+                      <Link to={`/viewcourse/${course.id}`}></Link>
                     </Card.Text>
                     {isSameUser ? (
                       <React.Fragment>
                         <Button style={{ borderRadius: '25px', margin: '10px' }} onClick={() => destroy(course.id)}>Delete Course</Button>
-                        <Link to={`/update-post/${course.id}`}>
+                        <Link to={`/update-course/${course.id}`}>
                           <Button style={{ borderRadius: '25px', margin: '10px' }}>Update Course</Button>
                         </Link>
                       </React.Fragment>

@@ -59,7 +59,13 @@ class App extends Component {
           <AuthenticatedRoute user={user} path='/new-course' render={() => (
             <CourseCreate msgAlert={this.msgAlert} user={user} />
           )} />
-          <AuthenticatedRoute user={user} path='/all-courses' render={() => (
+          <AuthenticatedRoute user={user} path='/courses' render={() => (
+            <Courses msgAlert={this.msgAlert} user={user} />
+          )} />
+          <AuthenticatedRoute user={user} path='/viewcourse' render={() => (
+            <Courses msgAlert={this.msgAlert} user={user} />
+          )} />
+          <AuthenticatedRoute user={user} path='/update-course' render={() => (
             <Courses msgAlert={this.msgAlert} user={user} />
           )} />
         </main>
