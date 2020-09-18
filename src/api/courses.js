@@ -29,28 +29,23 @@ export const allCourses = (user, course) => {
   })
 }
 
-export const signOut = user => {
+export const showCourse = (user, course, id) => {
   return axios({
-    url: apiUrl + '/sign-out/',
-    method: 'DELETE',
+    url: apiUrl + `/courses/${id}`,
+    method: 'GET',
     headers: {
       'Authorization': `Token ${user.token}`
     }
   })
 }
 
-export const changePassword = (passwords, user) => {
+export const updateCourse = (user, course, id) => {
   return axios({
-    url: apiUrl + '/change-pw/',
+    url: apiUrl + `/courses/${id}/`,
     method: 'PATCH',
     headers: {
       'Authorization': `Token ${user.token}`
     },
-    data: {
-      passwords: {
-        old: passwords.oldPassword,
-        new: passwords.newPassword
-      }
-    }
+    data: { course }
   })
 }

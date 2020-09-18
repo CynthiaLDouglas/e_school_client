@@ -9,5 +9,7 @@ export default {
   createCourseSuccess: 'Course created',
   createCourseFailure: 'Course creation Failed',
   deleteCourseSuccess: 'Course was deleted',
-  deleteCourseFailure: 'Course failed to delete'
+  deleteCourseFailure: 'Course failed to delete',
+  updateCourseSuccess: 'Course successfully updated',
+  updateCourseFailure: 'Course failed to update'
 }
