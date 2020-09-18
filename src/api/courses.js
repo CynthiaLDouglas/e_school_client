@@ -19,7 +19,7 @@ export const createCourse = (user, course) => {
   })
 }
 
-export const allCourses = (user, course) => {
+export const allCourses = (user, owner) => {
   return axios({
     url: apiUrl + '/courses/',
     method: 'GET',
