@@ -49,3 +49,13 @@ export const updateCourse = (user, course, id) => {
     data: { course }
   })
 }
+
+export const destroyCourse = (user, course, id) => {
+  return axios({
+    url: apiUrl + `/courses/${id}`,
+    method: 'DELETE',
+    headers: {
+      'Authorization': `Token ${user.token}`
+    }
+  })
+}
