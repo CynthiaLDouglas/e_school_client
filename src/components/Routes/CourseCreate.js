@@ -57,17 +57,13 @@ const CourseCreate = ({ msgAlert, user }) => {
               onChange={handleChange}
             />
           </Form.Group>
-          <Form.Group controlid="subject">
-            <Form.Label>Subject</Form.Label>
-            <Form.Control
-              required
-              type="text"
-              name="subject"
-              value={course.subject}
-              placeholder="Enter a Subject"
-              onChange={handleChange}
-            />
-          </Form.Group>
+          <label htmlFor="subject">Choose a subject:</label>
+          <select onChange={handleChange} required name="subject" value={course.subject}>
+            <option onChange={handleChange} value="MATH">Math</option>
+            <option onChange={handleChange} value="SCIENCE">Science</option>
+            <option onChange={handleChange} value="ENGLISH">English</option>
+            <option onChange={handleChange} value="HUMANITIES">Humanities</option>
+          </select>
           <Form.Group controlid="course_description">
             <Form.Label>Course Description</Form.Label>
             <InputGroup controlid="course_description">

@@ -3,7 +3,7 @@ import { Route } from 'react-router-dom'
 
 import AuthenticatedRoute from '../AuthenticatedRoute/AuthenticatedRoute'
 import AutoDismissAlert from '../AutoDismissAlert/AutoDismissAlert'
-import Header from '../Header/Header'
+import Navbar from '../Header/Navbar'
 import SignUp from '../SignUp/SignUp'
 import SignIn from '../SignIn/SignIn'
 import SignOut from '../SignOut/SignOut'
@@ -11,6 +11,7 @@ import ChangePassword from '../ChangePassword/ChangePassword'
 import CourseCreate from '../Routes/CourseCreate'
 import Courses from '../Routes/Courses'
 import UpdateCourse from '../Routes/UpdateCourse'
+import DeleteCourse from '../Routes/DeleteCourse'
 
 class App extends Component {
   constructor () {
@@ -35,7 +36,7 @@ class App extends Component {
 
     return (
       <Fragment>
-        <Header user={user} />
+        <Navbar user={user} />
         {msgAlerts.map((msgAlert, index) => (
           <AutoDismissAlert
             key={index}
@@ -68,6 +69,9 @@ class App extends Component {
           )} />
           <AuthenticatedRoute user={user} path='/update-course/:id' render={({ match }) => (
             <UpdateCourse msgAlert={this.msgAlert} user={user} match={match} />
+          )} />
+          <AuthenticatedRoute user={user} path='/delete-confirm/:id' render={({ match }) => (
+            <DeleteCourse msgAlert={this.msgAlert} user={user} match={match} />
           )} />
         </main>
       </Fragment>

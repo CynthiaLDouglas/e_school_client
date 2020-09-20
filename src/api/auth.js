@@ -25,7 +25,8 @@ export const signIn = credentials => {
     data: {
       credentials: {
         email: credentials.email,
-        password: credentials.password
+        password: credentials.password,
+        role_in_school: credentials.roleInSchool
       }
     }
   })
