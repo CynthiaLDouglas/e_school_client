@@ -59,12 +59,17 @@ export function Navbar ({ user }) {
             </li>
             <li className='nav-item'>
               <Link to='/new-course' className='nav-links' onClick={closeMobileMenu}>
-            Create a Course
+            New Course
               </Link>
             </li>
             <li className='nav-item'>
               <Link to='/sign-out' className='nav-links' onClick={closeMobileMenu}>
-            Create a Course
+            Sign Out
+              </Link>
+            </li>
+            <li className='nav-item'>
+              <Link to='/change-password' className='nav-links' onClick={closeMobileMenu}>
+            Change Password
               </Link>
             </li>
           </ul>
