@@ -2,7 +2,7 @@ import React, { Fragment, useState } from 'react'
 import { Link } from 'react-router-dom'
 import './Button.css'
 import './Navbar.css'
-import { Dropdown } from 'react-bootstrap'
+import { Dropdown, Button } from 'react-bootstrap'
 
 export function Navbar ({ user }) {
   const [click, setClick] = useState(false)
@@ -57,12 +57,12 @@ export function Navbar ({ user }) {
           <ul className={click ? 'nav-menu active' : 'nav-menu'}>
             <li className='nav-item'>
               <Link to='/sign-in' onClick={closeMobileMenu}>
-                <button className='btn'>Sign-In</button>
+                <Button className='btn'>Sign-In</Button>
               </Link>
             </li>
             <li className='nav-item'>
               <Link to='/sign-up' onClick={closeMobileMenu}>
-                <button className='btn'>Sign-Up</button>
+                <Button className='btn'>Sign-Up</Button>
               </Link>
             </li>
           </ul>
