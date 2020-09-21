@@ -29,7 +29,6 @@ export function Navbar ({ user }) {
             See Courses
               </Link>
             </li>
-            { console.log(user)}
             <li className='nav-item'>
               <Link to='/new-course' className='nav-links' onClick={closeMobileMenu}>
             New Course
@@ -44,6 +43,11 @@ export function Navbar ({ user }) {
                 <Dropdown.Item href="#/sign-out">Sign Out</Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>
+            <li className='nav-item'>
+              <Link to='/registrations' className='nav-links' onClick={closeMobileMenu}>
+            Registrations
+              </Link>
+            </li>
           </ul>
         </nav>
       ) : (

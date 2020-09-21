@@ -13,7 +13,12 @@ import Courses from '../Routes/Courses'
 import UpdateCourse from '../Routes/UpdateCourse'
 import DeleteCourse from '../Routes/DeleteCourse'
 import ShowCourse from '../Routes/ShowCourse'
-// import Homepage from '../Homepage'
+import RegCreate from '../Registrations/RegCreate'
+import Registrations from '../Registrations/Registrations'
+import UpdateReg from '../Registrations/UpdateRegistration'
+import DeleteReg from '../Registrations/DeleteRegistration'
+import ShowReg from '../Registrations/ShowRegistration'
+import Homepage from '../Homepage'
 
 class App extends Component {
   constructor () {
@@ -48,13 +53,14 @@ class App extends Component {
           />
         ))}
         <main className="container">
-          {/* <Route path='/' component={Homepage}/> */}
-          <Route path='/sign-up' render={() => (
+          <Route exact path='/' component={Homepage}/>
+          <Route exact path='/sign-up' render={() => (
             <SignUp msgAlert={this.msgAlert} setUser={this.setUser} />
           )} />
-          <Route path='/sign-in' render={() => (
+          <Route exact path='/sign-in' render={() => (
             <SignIn msgAlert={this.msgAlert} setUser={this.setUser} />
           )} />
+          <AuthenticatedRoute exact path='/' component={Homepage}/>
           <AuthenticatedRoute user={user} path='/sign-out' render={() => (
             <SignOut msgAlert={this.msgAlert} clearUser={this.clearUser} user={user} />
           )} />
@@ -67,9 +73,6 @@ class App extends Component {
           <AuthenticatedRoute user={user} exact path='/courses' render={() => (
             <Courses msgAlert={this.msgAlert} user={user} />
           )} />
-          <AuthenticatedRoute user={user} path='/viewcourse' render={() => (
-            <Courses msgAlert={this.msgAlert} user={user} />
-          )} />
           <AuthenticatedRoute user={user} path='/update-course/:id' render={({ match }) => (
             <UpdateCourse msgAlert={this.msgAlert} user={user} match={match} />
           )} />
@@ -78,6 +81,21 @@ class App extends Component {
           )} />
           <AuthenticatedRoute user={user} path='/courses/:id' render={({ match }) => (
             <ShowCourse msgAlert={this.msgAlert} user={user} match={match} />
+          )} />
+          <AuthenticatedRoute user={user} path='/new-registration' render={() => (
+            <RegCreate msgAlert={this.msgAlert} user={user} />
+          )} />
+          <AuthenticatedRoute user={user} exact path='/registrations' render={() => (
+            <Registrations msgAlert={this.msgAlert} user={user} />
+          )} />
+          <AuthenticatedRoute user={user} path='/update-reg/:id' render={({ match }) => (
+            <UpdateReg msgAlert={this.msgAlert} user={user} match={match} />
+          )} />
+          <AuthenticatedRoute user={user} path='/delete-reg-confirm/:id' render={({ match }) => (
+            <DeleteReg msgAlert={this.msgAlert} user={user} match={match} />
+          )} />
+          <AuthenticatedRoute user={user} path='/registrations/:id' render={({ match }) => (
+            <ShowReg msgAlert={this.msgAlert} user={user} match={match} />
           )} />
         </main>
       </Fragment>

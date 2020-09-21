@@ -29,7 +29,7 @@ export const viewAllReg = (user, owner) => {
   })
 }
 
-export const viewOneReg = (user, course, id) => {
+export const viewOneReg = (user, registration, id) => {
   return axios({
     url: apiUrl + `/registrations/${id}`,
     method: 'GET',
@@ -39,7 +39,7 @@ export const viewOneReg = (user, course, id) => {
   })
 }
 
-export const updateReg = (user, course, id) => {
+export const updateReg = (user, registration, id) => {
   return axios({
     url: apiUrl + `/registrations/${id}/`,
     method: 'PATCH',
@@ -50,7 +50,7 @@ export const updateReg = (user, course, id) => {
   })
 }
 
-export const deleteReg = (user, registration, id) => {
+export const deleteReg = (user, id) => {
   return axios({
     url: apiUrl + `/registrations/${id}`,
     method: 'DELETE',
