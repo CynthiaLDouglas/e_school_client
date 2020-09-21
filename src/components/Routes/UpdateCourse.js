@@ -8,10 +8,10 @@ import Button from 'react-bootstrap/Button'
 import Select from 'react-select'
 
 const options = [
-  { value: 'math', label: 'Math' },
-  { value: 'english', label: 'English' },
-  { value: 'science', label: 'Science' },
-  { value: 'humanities', label: 'Humanities' }
+  { value: 'Math', label: 'Math' },
+  { value: 'English', label: 'English' },
+  { value: 'Science', label: 'Science' },
+  { value: 'Humanities', label: 'Humanities' }
 ]
 
 const UpdateCourse = ({ msgAlert, user, match }) => {
@@ -28,6 +28,15 @@ const UpdateCourse = ({ msgAlert, user, match }) => {
     event.persist()
     setCourse(prevCourse => {
       const updatedField = { [event.target.name]: event.target.value }
+      const editedCourse = Object.assign({}, prevCourse, updatedField)
+      return editedCourse
+    })
+  }
+
+  const selectChange = el => {
+    console.log(el.value)
+    setCourse(prevCourse => {
+      const updatedField = { 'subject': el.value }
       const editedCourse = Object.assign({}, prevCourse, updatedField)
       return editedCourse
     })
@@ -70,7 +79,7 @@ const UpdateCourse = ({ msgAlert, user, match }) => {
           <Select
             width='20%'
             options={options}
-            onChange={this.handleChange}
+            onChange={selectChange}
           />
           <Form.Group controlId="course_description">
             <label>Content</label>

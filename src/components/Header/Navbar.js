@@ -11,21 +11,22 @@ export function Navbar ({ user }) {
   const handleClick = () => setClick(!click)
   const closeMobileMenu = () => setClick(false)
 
-  const onMouseEnter = () => {
-    if (window.innerWidth < 960) {
+  const onHoverEnter = () => {
+    console.log(window.innerWidth)
+    if (window.innerWidth < 1200) {
       setDropdown(true)
     } else {
       setDropdown(false)
     }
   }
 
-  const onMouseLeave = () => {
-    if (window.innerWidth < 960) {
-      setDropdown(false)
-    } else {
-      setDropdown(false)
-    }
-  }
+  // const onHoverLeave = () => {
+  //   if (window.innerWidth < 1200) {
+  //     setDropdown(false)
+  //   } else {
+  //     setDropdown(false)
+  //   }
+  // }
 
   return (
     <Fragment>
@@ -50,8 +51,8 @@ export function Navbar ({ user }) {
             </li>
             <li
               className='nav-item'
-              onMouseEnter={onMouseEnter}
-              onMouseLeave={onMouseLeave}
+              onMouseEnter={onHoverEnter}
+              // onMouseLeave={onHoverLeave}
             >
               <Link to='/'
                 className='nav-links'

@@ -10,10 +10,10 @@ import messages from '../AutoDismissAlert/messages'
 import Select from 'react-select'
 
 const options = [
-  { value: 'math', label: 'Math' },
-  { value: 'english', label: 'English' },
-  { value: 'science', label: 'Science' },
-  { value: 'humanities', label: 'Humanities' }
+  { value: 'Math', label: 'Math' },
+  { value: 'English', label: 'English' },
+  { value: 'Science', label: 'Science' },
+  { value: 'Humanities', label: 'Humanities' }
 ]
 
 const CourseCreate = ({ msgAlert, user }) => {
@@ -28,6 +28,16 @@ const CourseCreate = ({ msgAlert, user }) => {
       return editedCourse
     })
   }
+
+  const selectChange = el => {
+    console.log(el.value)
+    setCourse(prevCourse => {
+      const updatedField = { 'subject': el.value }
+      const editedCourse = Object.assign({}, prevCourse, updatedField)
+      return editedCourse
+    })
+  }
+
   const handleSubmit = event => {
     event.preventDefault()
     createCourse(user, course)
@@ -66,8 +76,9 @@ const CourseCreate = ({ msgAlert, user }) => {
             />
           </Form.Group>
           <Select
+            width='20%'
             options={options}
-            onChange={this.handleChange}
+            onChange={selectChange}
           />
           <Form.Group controlid="course_description">
             <Form.Label>Course Description</Form.Label>
