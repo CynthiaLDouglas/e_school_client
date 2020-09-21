@@ -57,12 +57,12 @@ export function Navbar ({ user }) {
           <ul className={click ? 'nav-menu active' : 'nav-menu'}>
             <li className='nav-item'>
               <Link to='/sign-in' onClick={closeMobileMenu}>
-                <Button className='btn'>Sign-In</Button>
+                <Button className="btn">Sign-In</Button>
               </Link>
             </li>
             <li className='nav-item'>
               <Link to='/sign-up' onClick={closeMobileMenu}>
-                <Button className='btn'>Sign-Up</Button>
+                <Button className="btn">Sign-Up</Button>
               </Link>
             </li>
           </ul>
