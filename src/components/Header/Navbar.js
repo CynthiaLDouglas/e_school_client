@@ -32,7 +32,7 @@ export function Navbar ({ user }) {
       { user ? (
         <nav className="navbar">
           <Link to='/' className='navbar-logo'>
-        E-School LMS
+        E-School LMS <i className="fas fa-chalkboard"></i>
           </Link>
           <div className='menu-icon' onClick={handleClick}>
             <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
@@ -72,7 +72,7 @@ export function Navbar ({ user }) {
       ) : (
         <nav className="navbar">
           <Link to='/' className='navbar-logo'>
-        E-School LMS
+        E-School LMS <i className="fas fa-chalkboard"></i>
           </Link>
           <div className='menu-icon' onClick={handleClick}>
             <i className={click ? 'fas fa-times' : 'fas fa-bars'} />

@@ -80,7 +80,7 @@ const UpdateCourse = ({ msgAlert, user, match }) => {
             /><br />
           </Form.Group>
           <Button style={{ borderRadius: '25px', margin: '10px' }} type="submit">Update</Button>
-          <Link to='/'>
+          <Link to='/courses'>
             <Button style={{ borderRadius: '25px', margin: '10px' }}>Cancel</Button>
           </Link>
         </Form>

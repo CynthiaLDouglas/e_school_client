@@ -12,6 +12,7 @@ import CourseCreate from '../Routes/CourseCreate'
 import Courses from '../Routes/Courses'
 import UpdateCourse from '../Routes/UpdateCourse'
 import DeleteCourse from '../Routes/DeleteCourse'
+// import Homepage from '../Homepage'
 
 class App extends Component {
   constructor () {
@@ -46,6 +47,7 @@ class App extends Component {
           />
         ))}
         <main className="container">
+          {/* <Route path='/' component={Homepage}/> */}
           <Route path='/sign-up' render={() => (
             <SignUp msgAlert={this.msgAlert} setUser={this.setUser} />
           )} />
