@@ -29,7 +29,7 @@ export const allCourses = (user, owner) => {
   })
 }
 
-export const showCourse = (user, course, id) => {
+export const showCourse = (user, id) => {
   return axios({
     url: apiUrl + `/courses/${id}`,
     method: 'GET',
@@ -50,7 +50,7 @@ export const updateCourse = (user, course, id) => {
   })
 }
 
-export const destroyCourse = (user, course, id) => {
+export const destroyCourse = (user, id) => {
   return axios({
     url: apiUrl + `/courses/${id}`,
     method: 'DELETE',

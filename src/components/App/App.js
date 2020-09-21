@@ -12,6 +12,7 @@ import CourseCreate from '../Routes/CourseCreate'
 import Courses from '../Routes/Courses'
 import UpdateCourse from '../Routes/UpdateCourse'
 import DeleteCourse from '../Routes/DeleteCourse'
+import ShowCourse from '../Routes/ShowCourse'
 // import Homepage from '../Homepage'
 
 class App extends Component {
@@ -63,7 +64,7 @@ class App extends Component {
           <AuthenticatedRoute user={user} path='/new-course' render={() => (
             <CourseCreate msgAlert={this.msgAlert} user={user} />
           )} />
-          <AuthenticatedRoute user={user} path='/courses' render={() => (
+          <AuthenticatedRoute user={user} exact path='/courses' render={() => (
             <Courses msgAlert={this.msgAlert} user={user} />
           )} />
           <AuthenticatedRoute user={user} path='/viewcourse' render={() => (
@@ -74,6 +75,9 @@ class App extends Component {
           )} />
           <AuthenticatedRoute user={user} path='/delete-confirm/:id' render={({ match }) => (
             <DeleteCourse msgAlert={this.msgAlert} user={user} match={match} />
+          )} />
+          <AuthenticatedRoute user={user} path='/courses/:id' render={({ match }) => (
+            <ShowCourse msgAlert={this.msgAlert} user={user} match={match} />
           )} />
         </main>
       </Fragment>

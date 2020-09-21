@@ -27,7 +27,11 @@ const Courses = ({ msgAlert, user, match }) => {
             <Row>
               <Col xl={{ span: 12, offset: 3 }}>
                 <Card style={{ width: '35rem', margin: '10px', opacity: '100%' }}>
-                  <Card.Header as="h5">Course: {course.name}</Card.Header>
+                  <Card.Header as="h5">
+                    <Link to={`/courses/${course.id}`}>
+                    Course: {course.name}
+                    </Link>
+                  </Card.Header>
                   <Card.Body>
                     <Card.Title> Taught By:{course.owner.first_name} {course.owner.last_name}</Card.Title>
                     <Card.Subtitle>Subject: {course.subject}</Card.Subtitle>

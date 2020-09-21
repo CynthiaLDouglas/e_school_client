@@ -25,8 +25,7 @@ export const signIn = credentials => {
     data: {
       credentials: {
         email: credentials.email,
-        password: credentials.password,
-        role_in_school: credentials.roleInSchool
+        password: credentials.password
       }
     }
   })
@@ -54,6 +53,16 @@ export const changePassword = (passwords, user) => {
         old: passwords.oldPassword,
         new: passwords.newPassword
       }
+    }
+  })
+}
+
+export const getUser = (user) => {
+  return axios({
+    url: apiUrl + '/users/',
+    method: 'GET',
+    headers: {
+      'Authorization': `Token ${user.token}`
     }
   })
 }

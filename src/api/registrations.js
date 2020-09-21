@@ -10,7 +10,8 @@ export const createReg = (user, registration) => {
       'Authorization': `Token ${user.token}`
     },
     data: {
-      registrations: {
+      registration: {
+        semester: registration.semester,
         course_name: registration.name,
         student_enrolled: registration.studentEnrolled
       }
@@ -18,9 +19,9 @@ export const createReg = (user, registration) => {
   })
 }
 
-export const allCourses = (user, owner) => {
+export const viewAllReg = (user, owner) => {
   return axios({
-    url: apiUrl + '/courses/',
+    url: apiUrl + '/registrations/',
     method: 'GET',
     headers: {
       'Authorization': `Token ${user.token}`
@@ -28,9 +29,9 @@ export const allCourses = (user, owner) => {
   })
 }
 
-export const showCourse = (user, course, id) => {
+export const viewOneReg = (user, course, id) => {
   return axios({
-    url: apiUrl + `/courses/${id}`,
+    url: apiUrl + `/registrations/${id}`,
     method: 'GET',
     headers: {
       'Authorization': `Token ${user.token}`
@@ -38,7 +39,7 @@ export const showCourse = (user, course, id) => {
   })
 }
 
-export const updateCourse = (user, course, id) => {
+export const updateReg = (user, course, id) => {
   return axios({
     url: apiUrl + `/registrations/${id}/`,
     method: 'PATCH',
@@ -49,7 +50,7 @@ export const updateCourse = (user, course, id) => {
   })
 }
 
-export const destroyRegistration = (user, registration, id) => {
+export const deleteReg = (user, registration, id) => {
   return axios({
     url: apiUrl + `/registrations/${id}`,
     method: 'DELETE',
