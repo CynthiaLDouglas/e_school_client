@@ -5,9 +5,16 @@ import { Redirect, Link } from 'react-router-dom'
 import Form from 'react-bootstrap/Form'
 import InputGroup from 'react-bootstrap/InputGroup'
 import Button from 'react-bootstrap/Button'
-// import Dropdown from 'react-bootstrap/Dropdown'
 import { createCourse } from '../../api/courses'
 import messages from '../AutoDismissAlert/messages'
+import Select from 'react-select'
+
+const options = [
+  { value: 'math', label: 'Math' },
+  { value: 'english', label: 'English' },
+  { value: 'science', label: 'Science' },
+  { value: 'humanities', label: 'Humanities' }
+]
 
 const CourseCreate = ({ msgAlert, user }) => {
   const [course, setCourse] = useState({ name: '', subject: '', course_description: '' })
@@ -58,17 +65,10 @@ const CourseCreate = ({ msgAlert, user }) => {
               onChange={handleChange}
             />
           </Form.Group>
-          <Form.Group controlid="subject">
-            <Form.Label>Subject</Form.Label>
-            <Form.Control
-              required
-              type="text"
-              name="subject"
-              value={course.subject}
-              placeholder="Enter a Subject"
-              onChange={handleChange}
-            />
-          </Form.Group>
+          <Select
+            options={options}
+            onChange={this.handleChange}
+          />
           <Form.Group controlid="course_description">
             <Form.Label>Course Description</Form.Label>
             <InputGroup controlid="course_description">
