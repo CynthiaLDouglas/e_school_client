@@ -5,6 +5,8 @@ import messages from '../AutoDismissAlert/messages'
 import { updateCourse, showCourse } from '../../api/courses'
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
+import { SubjectItems } from './SubjectItems'
+import Select from 'react-select'
 
 const UpdateCourse = ({ msgAlert, user, match }) => {
   const [course, setCourse] = useState({ name: '', subject: '', course_description: '' })
@@ -59,15 +61,11 @@ const UpdateCourse = ({ msgAlert, user, match }) => {
               type="text"
             /><br />
           </Form.Group>
-          <Form.Group controlId="subject">
-            <Form.Label>Subject</Form.Label>
-            <Form.Control
-              value={course.subject}
-              name="subject"
-              onChange={handleChange}
-              type="text"
-            /><br />
-          </Form.Group>
+          <Select
+            width='200px'
+            enuColor='red'
+            Options={SubjectItems}
+          />
           <Form.Group controlId="course_description">
             <label>Content</label>
             <Form.Control

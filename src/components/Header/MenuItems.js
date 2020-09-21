@@ -1,7 +1,7 @@
 export const MenuItems = [
   {
     title: 'Change Password',
-    path: '/change-pw',
+    path: '/change-password',
     cName: 'dropdown-link'
   },
   {

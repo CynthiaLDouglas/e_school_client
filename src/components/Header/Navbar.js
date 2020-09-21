@@ -13,9 +13,9 @@ export function Navbar ({ user }) {
 
   const onMouseEnter = () => {
     if (window.innerWidth < 960) {
-      setDropdown(false)
-    } else {
       setDropdown(true)
+    } else {
+      setDropdown(false)
     }
   }
 
@@ -48,23 +48,26 @@ export function Navbar ({ user }) {
             New Course
               </Link>
             </li>
-            <li className='nav-item'
+            <li
+              className='nav-item'
               onMouseEnter={onMouseEnter}
               onMouseLeave={onMouseLeave}
             >
-              <Link to='/' className='nav-links' onClick={closeMobileMenu}>
+              <Link to='/'
+                className='nav-links'
+                onClick={closeMobileMenu}>
             Options <i className='fas fa-caret-down' />
               </Link>
               {dropdown && <Dropdown />}
             </li>
             <li className='nav-item'>
-              <Link to='/sign-out' className='nav-links' onClick={closeMobileMenu}>
-            Sign Out
+              <Link to='/change-password' className='nav-links' onClick={closeMobileMenu}>
+            Change Password
               </Link>
             </li>
             <li className='nav-item'>
-              <Link to='/change-password' className='nav-links' onClick={closeMobileMenu}>
-            Change Password
+              <Link to='/sign-out' className='nav-links' onClick={closeMobileMenu}>
+            Sign Out
               </Link>
             </li>
           </ul>
