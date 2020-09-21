@@ -21,12 +21,12 @@ const DeleteCourse = ({ msgAlert, user, match }) => {
       .then(() => msgAlert({
         heading: 'Delete Course Success',
         message: messages.deleteCourseSuccess,
-        variant: 'success'
+        variant: 'primary'
       }))
       .catch(() => msgAlert({
         heading: 'Delete Course Failure',
         message: messages.deleteCourseFailure,
-        variant: 'danger'
+        variant: 'warning'
       }))
   }
 
@@ -36,11 +36,13 @@ const DeleteCourse = ({ msgAlert, user, match }) => {
 
   return (
     <div className="col-sm-10 col-md-8 mx-auto mt-5">
-    Are you sure? <br />
-      <Button style={{ borderRadius: '25px', margin: '10px' }} onClick={handleSubmit}>Delete Course</Button>
-      <Link to='/courses'>
-        <Button style={{ borderRadius: '25px', margin: '10px' }}>Back to Courses</Button>
-      </Link>
+      <div className="row">
+        Are you sure?<br />
+        <Button style={{ borderRadius: '25px', margin: '10px' }} onClick={handleSubmit}>Delete Course</Button>
+        <Link to='/courses'>
+          <Button style={{ borderRadius: '25px', margin: '10px' }}>Back to Courses</Button>
+        </Link>
+      </div>
     </div>
   )
 }

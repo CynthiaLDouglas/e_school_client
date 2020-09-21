@@ -1,9 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { allCourses } from '../../api/courses'
 import { Link, withRouter } from 'react-router-dom'
-// import messages from '../AutoDismissAlert/messages'
-// import apiUrl from '../../apiConfig'
-// import axios from 'axios'
 import { Card } from 'react-bootstrap'
 import Button from 'react-bootstrap/Button'
 // import Layout from '../shared/Layout'
@@ -13,34 +10,12 @@ import Col from 'react-bootstrap/Col'
 
 const Courses = ({ msgAlert, user, match }) => {
   const [courses, setCourses] = useState([])
-  // const [deleted, setDeleted] = useState(false)
 
   useEffect(() => {
     allCourses(user, courses)
       .then(res => setCourses(res.data.courses))
       .catch(console.error)
   }, [])
-
-  // const destroy = (id) => {
-  //   axios({
-  //     url: apiUrl + `/courses/${id}`,
-  //     method: 'DELETE',
-  //     headers: {
-  //       'Authorization': `Token ${user.token}`
-  //     }
-  //   })
-  //     .then(() => setDeleted(id))
-  //     .then(() => msgAlert({
-  //       heading: 'Delete Course Success',
-  //       message: messages.deleteCourseSuccess,
-  //       variant: 'success'
-  //     }))
-  //     .catch(() => msgAlert({
-  //       heading: 'Delete Course Failure',
-  //       message: messages.deleteCourseFailure,
-  //       variant: 'danger'
-  //     }))
-  // }
 
   let coursesToRender
   if (courses) {

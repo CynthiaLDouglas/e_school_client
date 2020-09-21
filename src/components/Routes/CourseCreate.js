@@ -1,7 +1,7 @@
 // Code for creating a course and displaying the Form on React.js client
 
 import React, { useState } from 'react'
-import { Redirect } from 'react-router-dom'
+import { Redirect, Link } from 'react-router-dom'
 import Form from 'react-bootstrap/Form'
 import InputGroup from 'react-bootstrap/InputGroup'
 import Button from 'react-bootstrap/Button'
@@ -28,17 +28,18 @@ const CourseCreate = ({ msgAlert, user }) => {
       .then(() => msgAlert({
         heading: 'Create Course Success',
         message: messages.createCourseSuccess,
-        variant: 'success'
+        variant: 'primary'
       }))
+      .then(setCourse({ name: '', subject: '', course_description: '' }))
       .catch(() => msgAlert({
         heading: 'Failed To Create Course: ',
         message: messages.createCourseFailure,
-        variant: 'danger'
+        variant: 'warning'
       }))
   }
 
   if (createdCourseId) {
-    return <Redirect to='/' />
+    return <Redirect to='/courses' />
   }
 
   return (
@@ -86,6 +87,9 @@ const CourseCreate = ({ msgAlert, user }) => {
           <Button type="submit">
               Submit
           </Button>
+          <Link to='/courses'>
+            <Button style={{ borderRadius: '25px', margin: '10px' }}>Back to Courses</Button>
+          </Link>
         </Form>
       </div>
     </div>

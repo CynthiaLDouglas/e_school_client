@@ -32,12 +32,13 @@ const UpdateCourse = ({ msgAlert, user, match }) => {
       .then(() => msgAlert({
         heading: 'Update Course Success',
         message: messages.updateCourseSuccess,
-        variant: 'success'
+        variant: 'primary'
       }))
+      .then(setCourse({ name: '', subject: '', course_description: '' }))
       .catch(() => msgAlert({
         heading: 'Failed To Update Course',
         message: messages.updateCourseFailure,
-        variant: 'danger'
+        variant: 'warning'
       }))
   }
 

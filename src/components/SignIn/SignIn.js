@@ -31,7 +31,7 @@ class SignIn extends Component {
       .then(() => msgAlert({
         heading: 'Sign In Success',
         message: messages.signInSuccess,
-        variant: 'success'
+        variant: 'primary'
       }))
       .then(() => history.push('/'))
       .catch(error => {
@@ -39,7 +39,7 @@ class SignIn extends Component {
         msgAlert({
           heading: 'Sign In Failed with error: ' + error.message,
           message: messages.signInFailure,
-          variant: 'danger'
+          variant: 'warning'
         })
       })
   }

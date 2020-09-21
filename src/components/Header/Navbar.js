@@ -39,8 +39,13 @@ export function Navbar ({ user }) {
           </div>
           <ul className={click ? 'nav-menu active' : 'nav-menu'}>
             <li className='nav-item'>
-              <Link to='/' className='nav-links' onClick={closeMobileMenu}>
-            Home
+              <Link to='/courses' className='nav-links' onClick={closeMobileMenu}>
+            See Courses
+              </Link>
+            </li>
+            <li className='nav-item'>
+              <Link to='/new-course' className='nav-links' onClick={closeMobileMenu}>
+            New Course
               </Link>
             </li>
             <li className='nav-item'
@@ -51,16 +56,6 @@ export function Navbar ({ user }) {
             Options <i className='fas fa-caret-down' />
               </Link>
               {dropdown && <Dropdown />}
-            </li>
-            <li className='nav-item'>
-              <Link to='/courses' className='nav-links' onClick={closeMobileMenu}>
-            See Courses
-              </Link>
-            </li>
-            <li className='nav-item'>
-              <Link to='/new-course' className='nav-links' onClick={closeMobileMenu}>
-            New Course
-              </Link>
             </li>
             <li className='nav-item'>
               <Link to='/sign-out' className='nav-links' onClick={closeMobileMenu}>
