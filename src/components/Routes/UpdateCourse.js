@@ -34,7 +34,6 @@ const UpdateCourse = ({ msgAlert, user, match }) => {
   }
 
   const selectChange = el => {
-    console.log(el.value)
     setCourse(prevCourse => {
       const updatedField = { 'subject': el.value }
       const editedCourse = Object.assign({}, prevCourse, updatedField)
