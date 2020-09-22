@@ -24,16 +24,15 @@ export function Navbar ({ user }) {
             <li className='nav-item nav-links'>
               Logged in: {user.email}
             </li>
-            <li className='nav-item'>
-              <Link to='/courses' className='nav-links' onClick={closeMobileMenu}>
-            See Courses
-              </Link>
-            </li>
-            <li className='nav-item'>
-              <Link to='/new-course' className='nav-links' onClick={closeMobileMenu}>
-            New Course
-              </Link>
-            </li>
+            <Dropdown>
+              <Dropdown.Toggle className="btn user-option-btn" variant='success' id="dropdown-basic">
+                Courses
+              </Dropdown.Toggle>
+              <Dropdown.Menu className="user-option-menu">
+                <Dropdown.Item href='/courses'>View All</Dropdown.Item>
+                <Dropdown.Item href='/new-course'>Create</Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
             <Dropdown>
               <Dropdown.Toggle className="btn user-option-btn" variant='success' id="dropdown-basic">
                 Registration
