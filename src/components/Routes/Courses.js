@@ -35,6 +35,7 @@ const Courses = ({ msgAlert, user, match }) => {
                       Professor:{course.owner.first_name} {course.owner.last_name}
                       <br />
                       Subject: {course.subject}
+                      Course ID: {course.id}
                     </Card.Text>
                     {isSameUser ? (
                       <React.Fragment>
