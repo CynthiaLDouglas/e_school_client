@@ -11,5 +11,7 @@ export default {
   deleteCourseSuccess: 'Course was deleted',
   deleteCourseFailure: 'Course failed to delete',
   updateCourseSuccess: 'Course successfully updated',
-  updateCourseFailure: 'Course failed to update'
+  updateCourseFailure: 'Course failed to update',
+  createRegSuccess: 'Student Successfully Registered.',
+  createRegFailure: 'Registration Failed.'
 }
