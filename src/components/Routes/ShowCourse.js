@@ -25,13 +25,11 @@ const ShowCourse = ({ user, match }) => {
       <div className="row">
         <Container>
           <Row>
-            <Col xl={{ span: 12, offset: 3 }}>
+            <Col>
               <Card style={{ width: '35rem', margin: '10px', opacity: '100%' }}>
                 <Card.Body>
                   <Card.Title as="h5">
-                    <Link to={`/courses/${course.id}`}>
                     Course: {course.name}
-                    </Link>
                   </Card.Title>
                   <Card.Subtitle>Subject: {course.subject}</Card.Subtitle>
                   <Card.Text>
@@ -40,7 +38,7 @@ const ShowCourse = ({ user, match }) => {
                   </Card.Text>
                   <React.Fragment>
                     <Link to='/courses'>
-                      <Button style={{ borderRadius: '25px', margin: '10px' }}>Back to Courses</Button>
+                      <Button variant='success' className="btn">Back to Courses</Button>
                     </Link>
                   </React.Fragment>
                 </Card.Body>

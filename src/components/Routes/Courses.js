@@ -25,31 +25,30 @@ const Courses = ({ msgAlert, user, match }) => {
         <div className="allcourses">
           <Container>
             <Row>
-              <Col xl={{ span: 12, offset: 3 }}>
-                <Card style={{ width: '35rem', margin: '10px', opacity: '100%' }}>
-                  <Card.Header as="h5">
-                    <Link to={`/courses/${course.id}`}>
-                    Course: {course.name}
-                    </Link>
-                  </Card.Header>
+              <Col lg={{ span: 12, offset: 3 }}>
+                <Card border="success" style={{ width: '35rem', margin: '10px', opacity: '750%' }}>
                   <Card.Body>
-                    <Card.Title> Taught By:{course.owner.first_name} {course.owner.last_name}</Card.Title>
-                    <Card.Subtitle>Subject: {course.subject}</Card.Subtitle>
+                    <Card.Title>
+                        Course: {course.name}
+                    </Card.Title>
                     <Card.Text>
-                      Course Description: <br />{course.course_description}
-                      <Link to={`/viewcourse/${course.id}`}></Link>
+                      Taught By:{course.owner.first_name} {course.owner.last_name}
+                      <br />
+                      Subject: {course.subject}
                     </Card.Text>
                     {isSameUser ? (
                       <React.Fragment>
-                        <Link to={`/delete-confirm/${course.id}`}>
-
-                          <Button style={{ borderRadius: '25px', margin: '10px' }}>Delete Course</Button>
-                        </Link>
                         <Link to={`/update-course/${course.id}`}>
-                          <Button style={{ borderRadius: '25px', margin: '10px' }}>Update Course</Button>
+                          <Button variant="success">Update Course</Button>
+                        </Link>
+                        <Link to={`/delete-confirm/${course.id}`}>
+                          <Button variant="success">Delete Course</Button>
                         </Link>
                       </React.Fragment>
                     ) : '' }
+                    <Link to={`/courses/${course.id}`}>
+                      See Description...
+                    </Link>
                   </Card.Body>
                 </Card>
               </Col>

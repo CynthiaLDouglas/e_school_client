@@ -45,10 +45,10 @@ const RegistrationCreate = ({ msgAlert, user }) => {
   return (
     <div className="row">
       <div className="col-sm-10 col-md-8 mx-auto mt-5">
-        <h3>Create New Registration</h3>
+        <h3 className="title">Create New Registration</h3>
         <Form onSubmit={handleSubmit}>
           <Form.Group controlid="semester">
-            <Form.Label>Semester</Form.Label>
+            <Form.Label className="bigger-font">Semester</Form.Label>
             <Form.Control
               required
               type="text"
@@ -59,7 +59,7 @@ const RegistrationCreate = ({ msgAlert, user }) => {
             />
           </Form.Group>
           <Form.Group controlid="name">
-            <Form.Label>Course ID</Form.Label>
+            <Form.Label className="bigger-font">Course ID</Form.Label>
             <Form.Control
               required
               type="text"
@@ -70,7 +70,7 @@ const RegistrationCreate = ({ msgAlert, user }) => {
             />
           </Form.Group>
           <Form.Group controlid="studentEnrolled">
-            <Form.Label>Student to Enroll</Form.Label>
+            <Form.Label className="bigger-font">Student</Form.Label>
             <InputGroup controlid="student_enrolled">
               <Form.Control
                 required
@@ -82,11 +82,11 @@ const RegistrationCreate = ({ msgAlert, user }) => {
               />
             </InputGroup>
           </Form.Group>
-          <Button type="submit">
+          <Button variant='success' className="btn"type="submit">
               Submit
           </Button>
           <Link to='/registrations'>
-            <Button style={{ borderRadius: '25px', margin: '10px' }}>Back to Registrations</Button>
+            <Button variant='success' className="btn">Back to Registrations</Button>
           </Link>
         </Form>
       </div>

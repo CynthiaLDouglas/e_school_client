@@ -50,10 +50,10 @@ class SignIn extends Component {
     return (
       <div className="row">
         <div className="col-sm-10 col-md-8 mx-auto mt-5">
-          <h3>Sign In</h3>
+          <h3 className="title">Sign In</h3>
           <Form onSubmit={this.onSignIn}>
             <Form.Group controlid="email">
-              <Form.Label>Email address</Form.Label>
+              <Form.Label className="bigger-font">Email address</Form.Label>
               <Form.Control
                 required
                 type="email"
@@ -64,7 +64,7 @@ class SignIn extends Component {
               />
             </Form.Group>
             <Form.Group controlid="password">
-              <Form.Label>Password</Form.Label>
+              <Form.Label className="bigger-font">Password</Form.Label>
               <Form.Control
                 required
                 name="password"

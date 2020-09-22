@@ -43,11 +43,10 @@ const Courses = ({ msgAlert, user, match }) => {
                     {isSameUser ? (
                       <React.Fragment>
                         <Link to={`/delete-confirm/${course.id}`}>
-
-                          <Button style={{ borderRadius: '25px', margin: '10px' }}>Delete Course</Button>
+                          <Button variant='success' style={{ borderRadius: '25px', margin: '10px' }}>Delete Course</Button>
                         </Link>
                         <Link to={`/update-course/${course.id}`}>
-                          <Button style={{ borderRadius: '25px', margin: '10px' }}>Update Course</Button>
+                          <Button variant='success' style={{ borderRadius: '25px', margin: '10px' }}>Update Course</Button>
                         </Link>
                       </React.Fragment>
                     ) : '' }

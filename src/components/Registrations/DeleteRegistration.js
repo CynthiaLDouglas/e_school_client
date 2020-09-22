@@ -55,9 +55,9 @@ const DeleteCourse = ({ msgAlert, user, match }) => {
                       <Link to={`/viewcourse/${course.id}`}></Link>
                     </Card.Text>
                     <React.Fragment>
-                      <Button style={{ borderRadius: '25px', margin: '10px' }} onClick={handleSubmit}>Delete Course</Button>
+                      <Button variant='success' style={{ borderRadius: '25px', margin: '10px' }} onClick={handleSubmit}>Delete Course</Button>
                       <Link to='/courses'>
-                        <Button style={{ borderRadius: '25px', margin: '10px' }}>Back to Courses</Button>
+                        <Button variant='success' style={{ borderRadius: '25px', margin: '10px' }}>Back to Courses</Button>
                       </Link>
                     </React.Fragment>
                   </Card.Body>

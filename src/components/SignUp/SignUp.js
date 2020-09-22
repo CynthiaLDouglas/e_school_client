@@ -61,10 +61,10 @@ class SignUp extends Component {
     return (
       <div className="row">
         <div className="col-sm-10 col-md-8 mx-auto mt-5">
-          <h3>Sign Up</h3>
+          <h3 className='title'>Sign Up</h3>
           <Form onSubmit={this.onSignUp}>
             <Form.Group controlid="email">
-              <Form.Label>Email address</Form.Label>
+              <Form.Label className="bigger-font">Email address</Form.Label>
               <Form.Control
                 required
                 type="email"
@@ -75,7 +75,7 @@ class SignUp extends Component {
               />
             </Form.Group>
             <Form.Group controlid="firstName">
-              <Form.Label>First Name</Form.Label>
+              <Form.Label className="bigger-font">First Name</Form.Label>
               <Form.Control
                 required
                 type="text"
@@ -86,7 +86,7 @@ class SignUp extends Component {
               />
             </Form.Group>
             <Form.Group controlid="lastName">
-              <Form.Label>Last Name</Form.Label>
+              <Form.Label className="bigger-font">Last Name</Form.Label>
               <Form.Control
                 required
                 type="text"
@@ -97,18 +97,18 @@ class SignUp extends Component {
               />
             </Form.Group>
             <Form.Group controlid="roleInSchool">
-              <Form.Label>Role</Form.Label>
+              <Form.Label className="bigger-font">Role</Form.Label>
               <Form.Control
                 required
                 type="text"
                 name="roleInSchool"
                 value={roleInSchool}
-                placeholder="Enter your role"
+                placeholder="TR for Teacher, ST for Student"
                 onChange={this.handleChange}
               />
             </Form.Group>
             <Form.Group controlid="password">
-              <Form.Label>Password</Form.Label>
+              <Form.Label className="bigger-font">Password</Form.Label>
               <Form.Control
                 required
                 name="password"
@@ -119,7 +119,7 @@ class SignUp extends Component {
               />
             </Form.Group>
             <Form.Group controlid="passwordConfirmation">
-              <Form.Label>Password Confirmation</Form.Label>
+              <Form.Label className="bigger-font">Password Confirmation</Form.Label>
               <Form.Control
                 required
                 name="passwordConfirmation"

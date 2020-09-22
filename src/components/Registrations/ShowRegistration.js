@@ -40,7 +40,7 @@ const ShowCourse = ({ user, match }) => {
                   </Card.Text>
                   <React.Fragment>
                     <Link to='/courses'>
-                      <Button style={{ borderRadius: '25px', margin: '10px' }}>Back to Courses</Button>
+                      <Button variant='success' style={{ borderRadius: '25px', margin: '10px' }}>Back to Courses</Button>
                     </Link>
                   </React.Fragment>
                 </Card.Body>

@@ -40,14 +40,12 @@ const DeleteCourse = ({ msgAlert, user, match }) => {
         <div className="row">
           <Container>
             <Row>
-              <Col xl={{ span: 12, offset: 3 }}>
+              <Col xl={{ span: 12 }}>
                 <Card style={{ width: '35rem', margin: '10px', opacity: '100%' }}>
-                  <Card.Header> Are you sure you would like to delete?</Card.Header>
+                  <Card.Header> Are you sure? </Card.Header>
                   <Card.Body>
                     <Card.Title as="h5">
-                      <Link to={`/courses/${course.id}`}>
                       Course: {course.name}
-                      </Link>
                     </Card.Title>
                     <Card.Subtitle>Subject: {course.subject}</Card.Subtitle>
                     <Card.Text>
@@ -55,9 +53,9 @@ const DeleteCourse = ({ msgAlert, user, match }) => {
                       <Link to={`/viewcourse/${course.id}`}></Link>
                     </Card.Text>
                     <React.Fragment>
-                      <Button style={{ borderRadius: '25px', margin: '10px' }} onClick={handleSubmit}>Delete Course</Button>
+                      <Button variant='danger' className="btn" onClick={handleSubmit}>CONFIRM</Button>
                       <Link to='/courses'>
-                        <Button style={{ borderRadius: '25px', margin: '10px' }}>Back to Courses</Button>
+                        <Button variant='success' className="btn">Back to Courses</Button>
                       </Link>
                     </React.Fragment>
                   </Card.Body>

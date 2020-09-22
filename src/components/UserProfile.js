@@ -29,32 +29,16 @@ const UserProfile = props => {
   //   alignItems: 'flex-start'
   // }
   // //
-  // const userReg = {
-  //   color: 'black',
-  //   height: '100vh',
-  //   display: 'flex',
-  //   justifyContent: 'center',
-  //   alignItems: 'flex-start'
-  // }
-  //
-  // const userView = {
-  //   color: '#f7e7bd',
-  //   display: 'flex'
-  // }
 
   return (
     <Fragment>
       <div>
         <Figure>
           <Figure.Image
-            width={360}
-            height={360}
+            style={{ opacity: '0.85' }}
             alt="Chalkboard reading: Success. Go Get it..."
             src="https://i.imgur.com/uT6q6XU.jpg"
           />
-          <Figure.Caption>
-          &quot;Opportunities don&apos;t happen. You create them.&quot; <br />-- Chris Grosser
-          </Figure.Caption>
         </Figure>
       </div>
     </Fragment>
