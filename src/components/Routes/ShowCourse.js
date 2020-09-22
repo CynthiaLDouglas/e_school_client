@@ -35,7 +35,7 @@ const ShowCourse = ({ user, match }) => {
                     <b className="bigger-font">Course Description:</b><br /><span style={{ color: '#d8e4d4' }}>{course.course_description}</span>
                   </Card.Text>
                   <br />
-                  <Card.Text><b className="bigger-font">Subject:</b> <span style={{ color: '#d8e4d4' }}>{course.subject}</span></Card.Text>
+                  <Card.Text><b className="bigger-font">Subject:</b> <span style={{ color: '#d8e4d4' }}><br />{course.subject}</span></Card.Text>
                   <React.Fragment>
                     <Link to='/courses'>
                       <Button variant='success' className="btn">Back to Courses</Button>
