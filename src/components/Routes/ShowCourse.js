@@ -26,16 +26,16 @@ const ShowCourse = ({ user, match }) => {
         <Container>
           <Row>
             <Col>
-              <Card style={{ width: '35rem', margin: '10px', opacity: '100%' }}>
+              <Card style={{ backgroundColor: '#31343a', width: '35rem', margin: '10px', opacity: '%' }}>
                 <Card.Body>
-                  <Card.Title as="h5">
-                    Course: {course.name}
-                  </Card.Title>
-                  <Card.Subtitle>Subject: {course.subject}</Card.Subtitle>
                   <Card.Text>
-                    Course Description: <br />{course.course_description}
-                    <Link to={`/viewcourse/${course.id}`}></Link>
+                    <b className="bigger-font">Course:</b> <span style={{ color: '#d8e4d4' }}>{course.name}</span>
                   </Card.Text>
+                  <Card.Text>
+                    <b className="bigger-font">Course Description:</b><br /><span style={{ color: '#d8e4d4' }}>{course.course_description}</span>
+                  </Card.Text>
+                  <br />
+                  <Card.Text><b className="bigger-font">Subject:</b> <span style={{ color: '#d8e4d4' }}>{course.subject}</span></Card.Text>
                   <React.Fragment>
                     <Link to='/courses'>
                       <Button variant='success' className="btn">Back to Courses</Button>

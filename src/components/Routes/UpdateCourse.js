@@ -67,7 +67,7 @@ const UpdateCourse = ({ msgAlert, user, match }) => {
       <div className="col-sm-10 col-md-8 mx-auto mt-5">
         <Form onSubmit={handleSubmit}>
           <Form.Group controlId="name">
-            <Form.Label className="bigger-font">Course Name</Form.Label>
+            <Form.Label className="bigger-font">Course Name: {course.name}</Form.Label>
             <Form.Control
               value={course.name}
               name="name"
@@ -75,7 +75,7 @@ const UpdateCourse = ({ msgAlert, user, match }) => {
               type="text"
             />
           </Form.Group>
-          <Form.Label className="bigger-font">Subject</Form.Label>
+          <Form.Label className="bigger-font">Subject: {course.subject}</Form.Label>
           <Select
             width='20%'
             options={options}

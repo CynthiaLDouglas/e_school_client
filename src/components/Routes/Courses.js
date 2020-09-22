@@ -32,7 +32,7 @@ const Courses = ({ msgAlert, user, match }) => {
                         Course: {course.name}
                     </Card.Title>
                     <Card.Text>
-                      Taught By:{course.owner.first_name} {course.owner.last_name}
+                      Professor:{course.owner.first_name} {course.owner.last_name}
                       <br />
                       Subject: {course.subject}
                     </Card.Text>
