@@ -2,7 +2,6 @@ import apiUrl from '../apiConfig'
 import axios from 'axios'
 
 export const createReg = (user, registration) => {
-  console.log(user, registration)
   return axios({
     method: 'POST',
     url: apiUrl + '/registrations/',
