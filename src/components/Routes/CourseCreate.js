@@ -60,7 +60,6 @@ const CourseCreate = ({ msgAlert, user }) => {
 
   return (
     <div className="row">
-      {console.log(user)}
       { user.role_in_school === 'ST' ? (
         <div className='title'>
           Unauthorized
