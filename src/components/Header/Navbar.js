@@ -34,11 +34,15 @@ export function Navbar ({ user }) {
             New Course
               </Link>
             </li>
-            <li className='nav-item'>
-              <Link to='/registrations' className='nav-links' onClick={closeMobileMenu}>
-                Registrations
-              </Link>
-            </li>
+            <Dropdown>
+              <Dropdown.Toggle className="btn user-option-btn" variant='success' id="dropdown-basic">
+                Registration
+              </Dropdown.Toggle>
+              <Dropdown.Menu className="user-option-menu">
+                <Dropdown.Item href="#/registrations">View All</Dropdown.Item>
+                <Dropdown.Item href="#/new-registration">Register</Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
             <Dropdown>
               <Dropdown.Toggle className="btn user-option-btn" variant='success' id="dropdown-basic">
                 User Options
