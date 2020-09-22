@@ -33,7 +33,7 @@ class SignIn extends Component {
         message: messages.signInSuccess,
         variant: 'primary'
       }))
-      .then(() => history.push('/'))
+      .then(() => history.push('/profile'))
       .catch(error => {
         this.setState({ email: '', password: '' })
         msgAlert({
@@ -75,7 +75,7 @@ class SignIn extends Component {
               />
             </Form.Group>
             <Button
-              variant="primary"
+              variant="success"
               type="submit"
             >
               Submit

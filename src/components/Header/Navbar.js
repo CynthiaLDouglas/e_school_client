@@ -1,7 +1,7 @@
 import React, { Fragment, useState } from 'react'
 import { Link } from 'react-router-dom'
-import './Button.css'
-import './Navbar.css'
+import './Button.scss'
+import './Navbar.scss'
 import { Dropdown, Button } from 'react-bootstrap'
 
 export function Navbar ({ user }) {
@@ -14,7 +14,7 @@ export function Navbar ({ user }) {
     <Fragment>
       { user ? (
         <nav className="navbar">
-          <Link to='/' className='navbar-logo'>
+          <Link to='/profile' className='navbar-logo'>
         E-School LMS <i className="fas fa-chalkboard"></i>
           </Link>
           <div className='menu-icon' onClick={handleClick}>
@@ -34,8 +34,13 @@ export function Navbar ({ user }) {
             New Course
               </Link>
             </li>
+            <li className='nav-item'>
+              <Link to='/registrations' className='nav-links' onClick={closeMobileMenu}>
+                Registrations
+              </Link>
+            </li>
             <Dropdown>
-              <Dropdown.Toggle className="btn user-option-btn" id="dropdown-basic">
+              <Dropdown.Toggle className="btn user-option-btn" variant='success' id="dropdown-basic">
                 User Options
               </Dropdown.Toggle>
               <Dropdown.Menu className="user-option-menu">
@@ -43,11 +48,6 @@ export function Navbar ({ user }) {
                 <Dropdown.Item href="#/sign-out">Sign Out</Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>
-            <li className='nav-item'>
-              <Link to='/registrations' className='nav-links' onClick={closeMobileMenu}>
-            Registrations
-              </Link>
-            </li>
           </ul>
         </nav>
       ) : (
@@ -61,12 +61,12 @@ export function Navbar ({ user }) {
           <ul className={click ? 'nav-menu active' : 'nav-menu'}>
             <li className='nav-item'>
               <Link to='/sign-in' onClick={closeMobileMenu}>
-                <Button className="btn">Sign-In</Button>
+                <Button variant='success' className='btn'>Sign-In</Button>
               </Link>
             </li>
             <li className='nav-item'>
               <Link to='/sign-up' onClick={closeMobileMenu}>
-                <Button className="btn">Sign-Up</Button>
+                <Button variant='success' className='btn'>Sign-Up</Button>
               </Link>
             </li>
           </ul>

@@ -19,6 +19,7 @@ import UpdateReg from '../Registrations/UpdateRegistration'
 import DeleteReg from '../Registrations/DeleteRegistration'
 import ShowReg from '../Registrations/ShowRegistration'
 import Homepage from '../Homepage'
+import UserProfile from '../UserProfile'
 
 class App extends Component {
   constructor () {
@@ -60,7 +61,6 @@ class App extends Component {
           <Route exact path='/sign-in' render={() => (
             <SignIn msgAlert={this.msgAlert} setUser={this.setUser} />
           )} />
-          <AuthenticatedRoute exact path='/' component={Homepage}/>
           <AuthenticatedRoute user={user} path='/sign-out' render={() => (
             <SignOut msgAlert={this.msgAlert} clearUser={this.clearUser} user={user} />
           )} />
@@ -96,6 +96,9 @@ class App extends Component {
           )} />
           <AuthenticatedRoute user={user} path='/registrations/:id' render={({ match }) => (
             <ShowReg msgAlert={this.msgAlert} user={user} match={match} />
+          )} />
+          <AuthenticatedRoute user={user} exact path='/profile' render={() => (
+            <UserProfile msgAlert={this.msgAlert} user={user} />
           )} />
         </main>
       </Fragment>

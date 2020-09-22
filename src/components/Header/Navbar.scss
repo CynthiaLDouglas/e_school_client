@@ -1,3 +1,5 @@
+@import '~bootstrap/scss/bootstrap';
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -7,6 +9,7 @@
 
 .navbar {
   background-image: url('../../images/chalkboard-black.jpg');
+  background-size: cover;
   height: 80px;
   display: flex;
   align-items: center;
@@ -18,7 +21,7 @@
   justify-content: flex-start;
   margin-left: 5px;
   cursor: pointer;
-  text-decoration: none;
+  text-decoration: none !important;
   font-size: 2rem;
 }
 

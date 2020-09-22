@@ -130,7 +130,7 @@ class SignUp extends Component {
               />
             </Form.Group>
             <Button
-              variant="primary"
+              variant="success"
               type="submit"
             >
               Submit
