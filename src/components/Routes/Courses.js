@@ -36,7 +36,6 @@ const Courses = ({ msgAlert, user, match }) => {
                       <br />
                       Subject: {course.subject}
 
-
                     </Card.Text>
                     {isSameUser ? (
                       <React.Fragment>

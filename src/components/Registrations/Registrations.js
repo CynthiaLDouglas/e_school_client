@@ -29,7 +29,7 @@ const Registrations = ({ msgAlert, user, match }) => {
                   <Card style={{ width: '35rem', margin: '10px', opacity: '80%' }}>
                     <Card.Body>
                       <Card.Title>Course:{registration.course_name.name}</Card.Title>
-                      <Card.Subtitle>Enrolled: {registration.student_enrolled.first_name}</Card.Subtitle>
+                      <Card.Subtitle>Enrolled: {registration.student_enrolled.last_name}, {registration.student_enrolled.first_name}</Card.Subtitle>
                       <Card.Text>Semester: {registration.semester}</Card.Text>
                     </Card.Body>
                   </Card>
