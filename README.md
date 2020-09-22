@@ -11,7 +11,7 @@ As a forever educator, I left the classroom with the goal to bring back tech sol
 
 ## Planning Story
 
-I was very ambitious this time around. I found that there were many things that I had to continue to learn about Django, python, serializers... Ah! - You name it. Many of the things I encountered, I had to relearn the lot of it. I began a very large idea and scaled back thinking that I could potentially acheive developing a learning management system in four days. Initially, my user stories included multiple types of users and multiple resources. I quickly realized I had to use my time to get back to the basics. I spent a large amount of time on the backend working to develop a table that combined information from two existing tables. ForeignKeys were traded for serializers and models we built, deleted and rebuilt. Eventually, working on this idea of having a table that connected two others, I was able to CRUD on a resource that had values that existed in other places! On the front end, I tried my hand at some custom styling and more. This was an excellent learning experience and though I'm not there yet, I believe that experiences like these will help me grow as a developer in the long run. 
+I was very ambitious this time around. I found that there were many things that I had to continue to learn about Django, python, serializers... Ah! - You name it. Many of the things I encountered, I had to relearn the lot of it. I began a very large idea and scaled back thinking that I could potentially acheive developing a learning management system in four days. Initially, my user stories included multiple types of users and multiple resources. I quickly realized I had to use my time to get back to the basics. I spent a large amount of time on the backend working to develop a table that combined information from two existing tables. ForeignKeys were traded for serializers and models we built, deleted and rebuilt. Eventually, working on this idea of having a table that connected two others, I was able to CRUD on a resource that had values that existed in other places! On the front end, I tried my hand at some custom styling and more. This was an excellent learning experience and though I'm not there yet, I believe that experiences like these will help me grow as a developer in the long run.
 
 ### User Stories
 
@@ -49,7 +49,7 @@ I was very ambitious this time around. I found that there were many things that 
 <img src="https://i.imgur.com/glEPpUV.png">
 [Click to view 'Sign Out Success'](https://i.imgur.com/FEmQ5rH.png)
 <img src="https://i.imgur.com/FEmQ5rH.png">
-[Click to view 'Responsive View'](https://i.imgur.com/XhZpwP6.png
+[Click to view 'Responsive View'](https://i.imgur.com/XhZpwP6.png)
 <img src="https://i.imgur.com/rQdX1HR.png">
 [Click to view 'React Select Form'](https://i.imgur.com/A0styDf.png)
 <img src="https://i.imgur.com/A0styDf.png">
