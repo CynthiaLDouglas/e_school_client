@@ -44,13 +44,13 @@ const Courses = ({ msgAlert, user, match }) => {
                         </Link>
                         <Link to={`/delete-confirm/${course.id}`}>
                           <Button variant="success">Delete Course</Button>
-                        </Link>
+                        </Link><br />
                       </React.Fragment>
                     ) : '' }
                     <Link to={`/courses/${course.id}`}>
                       See Description...
-                      <br /> Course ID: {course.id}
                     </Link>
+                    <br /> Course ID: {course.id}
                   </Card.Body>
                 </Card>
               </Col>
