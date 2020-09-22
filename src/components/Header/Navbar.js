@@ -29,8 +29,8 @@ export function Navbar ({ user }) {
                 Courses
               </Dropdown.Toggle>
               <Dropdown.Menu className="user-option-menu">
-                <Dropdown.Item href='/courses'>View All</Dropdown.Item>
-                <Dropdown.Item href='/new-course'>Create</Dropdown.Item>
+                <Dropdown.Item href='#/courses'>View All</Dropdown.Item>
+                <Dropdown.Item href='#/new-course'>Create</Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>
             <Dropdown>
