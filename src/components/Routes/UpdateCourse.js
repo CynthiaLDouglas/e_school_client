@@ -19,7 +19,7 @@ const UpdateCourse = ({ msgAlert, user, match }) => {
   const [updated, setUpdated] = useState(false)
 
   useEffect(() => {
-    showCourse(user, course, match.params.id)
+    showCourse(user, match.params.id)
       .then(res => setCourse(res.data.course))
       .catch(console.error)
   }, [])
@@ -67,7 +67,7 @@ const UpdateCourse = ({ msgAlert, user, match }) => {
       <div className="col-sm-10 col-md-8 mx-auto mt-5">
         <Form onSubmit={handleSubmit}>
           <Form.Group controlId="name">
-            <Form.Label className="bigger-font">Course Name: {course.name}</Form.Label>
+            <Form.Label className="bigger-font">Course Name:</Form.Label>
             <Form.Control
               value={course.name}
               name="name"
@@ -75,11 +75,12 @@ const UpdateCourse = ({ msgAlert, user, match }) => {
               type="text"
             />
           </Form.Group>
-          <Form.Label className="bigger-font">Subject: {course.subject}</Form.Label>
+          <Form.Label className="bigger-font">Subject:</Form.Label>
           <Select
             width='20%'
             options={options}
             onChange={selectChange}
+            value={course.name}
           />
           <br />
           <Form.Group controlId="course_description">
@@ -95,7 +96,7 @@ const UpdateCourse = ({ msgAlert, user, match }) => {
           </Form.Group>
           <Button variant='success' className="btn" type="submit">Update</Button>
           <Link to='/courses'>
-            <Button variant='success' lassName="btn">Cancel</Button>
+            <Button variant='success' className="btn">Cancel</Button>
           </Link>
         </Form>
       </div>
